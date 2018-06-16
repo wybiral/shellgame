@@ -1,1 +1,1 @@
-# shell-game
+# shellgame
