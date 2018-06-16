@@ -2,8 +2,8 @@ package container
 
 import (
 	"context"
-	"github.com/docker/docker/client"
 	"github.com/docker/docker/api/types/container"
+	"github.com/docker/docker/client"
 )
 
 // Instance of client for managing containers.

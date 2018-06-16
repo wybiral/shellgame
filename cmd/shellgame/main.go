@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/wybiral/shellgame/pkg/container"
-	"log"
 	"github.com/gliderlabs/ssh"
-	"io"
 	"github.com/wybiral/shellgame/levels"
+	"github.com/wybiral/shellgame/pkg/container"
+	"io"
+	"log"
 )
 
 // Handler for new SSH sessions.
@@ -62,6 +62,7 @@ func main() {
 		PasswordHandler: func(ctx ssh.Context, password string) bool {
 			ctx.SetValue("password", password)
 			user := ctx.User()
+			log.Println(user, password)
 			level, ok := levels[user]
 			if !ok {
 				return false
